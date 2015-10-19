@@ -1,0 +1,29 @@
+{
+  "name": "Macaulay Library Download Helper",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "This extension adds a download link to sounds on macaulaylibrary.org",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://macaulaylibrary.org/audio/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "*://macaulaylibrary.org/audio/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
